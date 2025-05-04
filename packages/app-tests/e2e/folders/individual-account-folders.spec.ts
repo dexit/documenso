@@ -380,7 +380,8 @@ test('user can move a document from folder to the root', async ({ page }) => {
   await page.getByText('Proposals').click();
 
   await page.getByTestId('document-table-action-btn').click();
-  await page.getByRole('menuitem', { name: 'Move to Folder' }).click();
+  await page.getByRole('menuitem', { name: 'Move to Folder' }).waitFor({ state: 'visible' });
+  await page.getByRole('menuitem', { name: 'Move to Folder' }).click({ force: true });
 
   await page.getByRole('button', { name: 'Root' }).click();
   await page.getByRole('button', { name: 'Move' }).click();
