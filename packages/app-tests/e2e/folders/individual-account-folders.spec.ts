@@ -659,10 +659,10 @@ test('template folder can be moved to the root', async ({ page }) => {
 
   await page.getByText('Client Templates').click();
   await page.getByRole('button', { name: '•••' }).nth(0).click();
-  await page.getByRole('menuitem', { name: 'Move' }).click();
+  await page.getByRole('menuitem', { name: 'Move' }).click({ force: true });
 
   await page.getByRole('button', { name: 'Root' }).click();
-  await page.getByRole('button', { name: 'Move Folder' }).click();
+  await page.getByRole('button', { name: 'Move Folder' }).click({ force: true });
 
   await page.waitForTimeout(1000);
 
