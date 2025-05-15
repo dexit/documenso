@@ -71,3 +71,9 @@ export const ZFindPasskeysQuerySchema = ZFindSearchParamsSchema.extend({
 });
 
 export type TSignUpMutationSchema = z.infer<typeof ZSignUpMutationSchema>;
+
+export const ZRevokeSessionMutationSchema = z.object({
+  sessionId: z.string().cuid(),
+});
+
+export type TRevokeSessionMutationSchema = z.infer<typeof ZRevokeSessionMutationSchema>;
