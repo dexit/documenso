@@ -180,14 +180,6 @@ export const invalidateSpecificSession = async (
   status: number;
   message: string;
 }> => {
-  if (currentSessionId === targetSessionId) {
-    return {
-      success: false,
-      status: 400,
-      message: 'Cannot sign out your current session with this endpoint',
-    };
-  }
-
   try {
     const targetSession = await prisma.session.findUnique({
       where: { id: targetSessionId },
