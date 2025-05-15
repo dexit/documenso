@@ -1,9 +1,7 @@
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 
-import { authClient } from '@documenso/auth/client';
-import { Button } from '@documenso/ui/primitives/button';
-
+import { SessionLogoutAllDialog } from '~/components/dialogs/session-logout-all-dialog';
 import { SettingsHeader } from '~/components/general/settings-header';
 import { SettingsSecuritySessionTable } from '~/components/tables/settings-security-session-table';
 import { appMetaTags } from '~/utils/meta';
@@ -22,14 +20,7 @@ export default function SettingsSecuritySessions() {
         subtitle={_(msg`View and manage all active sessions for your account.`)}
         hideDivider={true}
       >
-        <Button
-          variant="secondary"
-          onClick={async () =>
-            authClient.signOutAllSessions({ redirectPath: '/settings/security/sessions' })
-          }
-        >
-          Revoke all sessions
-        </Button>
+        <SessionLogoutAllDialog />
       </SettingsHeader>
 
       <div className="mt-4">
