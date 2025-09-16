@@ -1,10 +1,4 @@
 {
-  "projects": [
-    {
-      "src": "apps/remix",
-      "use": "@vercel/node"
-    }
-  ],
   "buildCommand": "turbo run build --filter=@documenso/remix",
   "outputDirectory": "apps/remix/build"
 }
