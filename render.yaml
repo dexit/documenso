@@ -141,8 +141,8 @@ services:
         sync: false
       - key: NEXT_PUBLIC_ENABLE_REGISTRATION
         value: true
-        - key: NEXT_PUBLIC_ENABLE_UNVERIFIED_EMAILS
-         value: true
+       - key: NEXT_PUBLIC_ENABLE_UNVERIFIED_EMAILS
+        value: true
       # Features Optional
       - key: NEXT_PUBLIC_DISABLE_SIGNUP
         sync: false
