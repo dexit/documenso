@@ -13,7 +13,7 @@ services:
         value: 23.11.0
 
       - key: PORT
-        value: 10000
+        value: 3000
 
       # Auth
       - key: NEXTAUTH_URL
@@ -42,7 +42,7 @@ services:
           type: web
           envVarKey: RENDER_EXTERNAL_URL
       - key: NEXT_PRIVATE_INTERNAL_WEBAPP_URL
-        value: 'http://localhost:10000'
+        value: 'http://localhost:3000'
 
       # SMTP
       - key: NEXT_PRIVATE_SMTP_TRANSPORT
@@ -139,8 +139,6 @@ services:
         sync: false
       - key: NEXT_PUBLIC_DOCUMENT_SIZE_UPLOAD_LIMIT
         sync: false
-   #   - key: NEXT_PUBLIC_ENABLE_PASSWORD_LOGIN
-    #    value: true
       - key: NEXT_PUBLIC_ENABLE_REGISTRATION
         value: true
         - key: NEXT_PUBLIC_ENABLE_UNVERIFIED_EMAILS
