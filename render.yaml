@@ -13,7 +13,7 @@ services:
         value: 23.11.0
 
       - key: PORT
-        value: 3000
+        value: 10000
 
       # Auth
       - key: NEXTAUTH_URL
@@ -42,7 +42,7 @@ services:
           type: web
           envVarKey: RENDER_EXTERNAL_URL
       - key: NEXT_PRIVATE_INTERNAL_WEBAPP_URL
-        value: 'http://localhost:3000'
+        value: 'http://localhost:10000'
 
       # SMTP
       - key: NEXT_PRIVATE_SMTP_TRANSPORT
