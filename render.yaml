@@ -10,7 +10,7 @@ services:
     envVars:
       # Node Version
       - key: NODE_VERSION
-        value: 18.17.0
+        value: 23.11.0
 
       - key: PORT
         value: 10000
@@ -48,17 +48,17 @@ services:
       - key: NEXT_PRIVATE_SMTP_TRANSPORT
         value: 'smtp-auth'
       - key: NEXT_PRIVATE_SMTP_HOST
-        sync: false
+        value: 'smtp.freesmtpservers.com'
       - key: NEXT_PRIVATE_SMTP_PORT
-        sync: false
+        value: '25'
       - key: NEXT_PRIVATE_SMTP_USERNAME
-        sync: false
+        value: ''
       - key: NEXT_PRIVATE_SMTP_PASSWORD
-        sync: false
+        value: ''
       - key: NEXT_PRIVATE_SMTP_FROM_NAME
-        sync: false
+        value: 'No Reply @ Documenso'
       - key: NEXT_PRIVATE_SMTP_FROM_ADDRESS
-        sync: false
+        value: 'noreply@documenso.com'
 
       # Stripe
       - key: NEXT_PRIVATE_STRIPE_API_KEY
@@ -104,7 +104,7 @@ services:
       - key: NEXT_PRIVATE_SIGNING_TRANSPORT
         sync: false
       - key: NEXT_PRIVATE_SIGNING_PASSPHRASE
-        sync: false
+        value: 'password'
       - key: NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH
         sync: false
       - key: NEXT_PRIVATE_SIGNING_LOCAL_FILE_CONTENTS
@@ -139,7 +139,12 @@ services:
         sync: false
       - key: NEXT_PUBLIC_DOCUMENT_SIZE_UPLOAD_LIMIT
         sync: false
-
+      - key: NEXT_PUBLIC_ENABLE_PASSWORD_LOGIN
+        value: true
+      - key: NEXT_PUBLIC_ENABLE_REGISTRATION
+        value: true
+        - key: NEXT_PUBLIC_ENABLE_UNVERIFIED_EMAILS
+         value: true
       # Features Optional
       - key: NEXT_PUBLIC_DISABLE_SIGNUP
         sync: false
