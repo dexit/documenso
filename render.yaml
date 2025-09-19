@@ -13,7 +13,7 @@ services:
         value: 23.11.0
 
       - key: PORT
-        value: 10000
+        value: 3000
 
       # Auth
       - key: NEXTAUTH_URL
